@@ -1,0 +1,65 @@
+/**********************
+* Blueprint Overrides *
+**********************/
+.prepend-top { margin-top:30px; }
+.prepend-bottom { margin-bottom:30px; }
+
+/***********************
+* Main Layout Elements *
+***********************/
+body {
+  background:#333 url(/images/background2.jpg) no-repeat center -264px;
+  color:#fff;
+}
+
+#page {
+  width:960px;
+  margin:0 auto;
+}
+
+#siteId {
+  position:relative;
+  height:110px;
+}
+
+#siteId h1 {
+  position:absolute;
+  top:25px;
+  left:-17px;
+  display:block;
+  width:477px;
+  height:80px;
+  background:transparent url(/images/dallas.reedy.png) no-repeat top left;
+  text-indent:-500px;
+  overflow:hidden;
+}
+
+#mainImage .placeholder {
+  height:200px;
+}
+
+#screenshots ol {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+#screenshots ol li {
+  list-style-type:none;
+  height:100px;
+  background:transparent url(/images/temp/screenshots.png) no-repeat top left;
+  opacity:0.35;
+}
+
+#screenshots ol li.even {
+  background-position:top right;
+}
+
+#mainCopy {
+  font-size:18px;
+  line-height:2;
+}
+
+#footer {
+  height:50px;
+}

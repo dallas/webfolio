@@ -1,0 +1,17 @@
+<div id="screenshots" class="container prepend-top">
+  <ol style="list-style:none inside; padding:0; margin:0;">
+    <%- 4.times do |i| -%>
+      <li class="column span-1 <%= cycle('odd', 'even', :name => :odd_even) %><%= ' last' if i == 3 %>"></li>
+    <%- end -%>
+  </ol>
+</div>
+
+<div id="mainCopy" class="container prepend-top">
+  <p class="column span-2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+  </p>
+  
+  <p class="column span-2 last">
+     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+  </p>
+</div>
