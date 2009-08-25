@@ -1,6 +1,8 @@
 /**********************
 * Blueprint Overrides *
 **********************/
+.border { padding-right:4px; margin-right:5px; border-right:1px solid #fffdd8; }
+.border.last { padding-right:0; margin-right:10px; border-right:0; }
 .prepend-top { margin-top:30px; }
 .prepend-bottom { margin-bottom:30px; }
 
@@ -8,16 +10,74 @@
 * Main Layout Elements *
 ***********************/
 body {
-  background:#333 url(/images/background2.jpg) no-repeat center -264px;
-  color:#fff;
+  color:#fffdd8;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing:0.03em;
 }
 
+body.web    { background-color:#da8000; }
+body.print  { background-color:#00bda5; }
+
+*:focus { outline:0; }
+
+a { color:#fff; text-decoration:underline; }
+body.web    a:hover { color:#ad6600; text-decoration:none; }
+body.print  a:hover { color:#009783; text-decoration:none; }
+/*a:visited { color:#dfdc96; }*/
+a:active { color:#eeecc2; }
+
+/*****************
+* Utility Styles *
+*****************/
+.scroller-wrapper {
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+.scroller-container {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.scroller-wrapper .left-arrow,
+.scroller-wrapper .right-arrow {
+  position:absolute;
+  top:50%;
+  display:block;
+  width:49px;
+  height:49px;
+  margin:-26px 0 0;
+  background:transparent url(/images/arrows.png) no-repeat top left;
+  text-indent:-9000px;
+  overflow:hidden;
+  z-index:2;
+}
+
+.scroller-wrapper .left-arrow   { left:-24px; }
+.scroller-wrapper .right-arrow  { right:-24px; }
+
+body.web    .scroller-wrapper .left-arrow   { background-position:top left; }
+body.web    .scroller-wrapper .right-arrow  { background-position:top right; }
+body.print  .scroller-wrapper .left-arrow   { background-position:bottom left; }
+body.print  .scroller-wrapper .right-arrow  { background-position:bottom right; }
+
+.scroller {
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+
+/****************
+* Page Elements *
+****************/
 #page {
   width:960px;
-  margin:0 auto;
+  margin:100px auto 50px;
 }
 
-#siteId {
+#header {
   position:relative;
   height:110px;
 }
@@ -25,40 +85,84 @@ body {
 #siteId h1 {
   position:absolute;
   top:25px;
-  left:-17px;
+  left:0;
   display:block;
   width:477px;
   height:80px;
-  background:transparent url(/images/dallas.reedy.png) no-repeat top left;
+  background:transparent url(/images/dallasreedy.png) no-repeat top left;
   text-indent:-500px;
   overflow:hidden;
 }
 
-#mainImage .placeholder {
-  height:200px;
+#navigation {
+  position:absolute;
+  top:66px;
+  left:485px;
+  padding:0;
+  margin:0;
+  list-style-type:none;
 }
 
+#navigation li { list-style-type:none; }
+
+#navigation li.border {
+  margin-right:10px;
+  padding-right:10px;
+}
+
+#navigation li a,
+#navigation li span {
+  padding:0 2px;
+  font-size:16px;
+  text-decoration:none;
+  color:#fffdd8;
+}
+
+#navigation li a:hover,
+#navigation span { background-color:#fffdd8; }
+
+body.web #navigation li a:hover,
+body.web #navigation li span { color:#da8000; }
+
+body.print #navigation li a:hover,
+body.print #navigation li span { color:#00bda5; }
+
+#screenshots { width:950px; }
+
 #screenshots ol {
-  list-style-type:none;
+  position:relative;
+  width:960px;
+  height:150px;
   margin:0;
   padding:0;
+  list-style-type:none;
+  overflow:hidden;
 }
 
 #screenshots ol li {
+  width:146px !important;
+  height:146px;
+  padding:1px;
+  border:1px solid #fffdd8;
+  background:none;
   list-style-type:none;
-  height:100px;
-  background:transparent url(/images/temp/screenshots.png) no-repeat top left;
-  opacity:0.35;
 }
 
-#screenshots ol li.even {
-  background-position:top right;
-}
+/*body.web #screenshots ol li { border-color:#ad6600; }
+body.print #screenshots ol li { border-color:#009783; }*/
 
 #mainCopy {
-  font-size:18px;
+  font-size:16px;
   line-height:2;
 }
+
+#mainCopy p.column {
+  width:303px;
+  margin:0;
+  padding:0 10px;
+}
+#mainCopy p.first { padding-left:0; }
+#mainCopy p.last { padding-right:0; }
 
 #footer {
   height:50px;

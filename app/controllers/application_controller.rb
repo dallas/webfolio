@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   def index
-    
+    @pieces = PortfolioPiece.send(params[:portfolio])
+  end
+  
+  def redirect
+    redirect_to portfolio_path('web')
   end
 end

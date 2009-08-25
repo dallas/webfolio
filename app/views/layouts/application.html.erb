@@ -10,16 +10,21 @@
   <%= stylesheet_link_tag('application', :media => 'screen, projection') %>
 </head>
 
-<body>  
+<body class="<%= params[:portfolio] %>">
   <div id="page">
-    <div id="header" class="container">
-      <div id="siteId" class="span-4">
+    <div id="header">
+      <div id="siteId">
           <h1>dallas.reedy</h1>
       </div>
       
-      <div id="mainImage" class="span-4">
-        <div class="placeholder"></div>
-      </div>
+      <ul id="navigation">
+        <li class="column border">
+          <%= link_to_unless_current 'web', portfolio_path('web') do |n|; content_tag(:span, n); end %>
+        </li>
+        <li class="column border last">
+          <%= link_to_unless_current 'print', portfolio_path('print') do |n|; content_tag(:span, n); end %>
+        </li>
+      </ul>
     </div>
     
     <div id="main" class="container">
@@ -31,7 +36,7 @@
     </div>
   </div>
   
-  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'jquery', 'application' %>
 </body>
   
 </html>
