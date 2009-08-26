@@ -1,12 +1,12 @@
 class PortfolioPiece < Struct.new(:category, :slug, :title, :url)
   
   PIECES = [
+    ['web', 'american-winery',    'American Winery',          'http://www.americanwinery.com/'],
+    ['web', 'winecliq',           'WinecliQ',                 'http://winecliq.com/'],
     ['web', 'le-grand-cru',       'Le Grand Cru',             'http://stage.legrandcru.us/'],
     ['web', 'le-grand-cru-blog',  'Le Blog of Le Grand Cru',  'http://blog.legrandcru.us/'],
-    ['web', 'winecliq',           'WinecliQ',                 'http://winecliq.com/'],
-    ['web', 'american-winery',    'American Winery',          'http://www.americanwinery.com/'],
-    ['web', 'd-and-n-blog',       'd&n.blog',                 'http://dallasandnicole.com/'],
     ['web', 'i-do-wedding-app',   'iDo wedding app',          'http://github.com/coffeepostal/iDo-Wedding-App/tree/master'],
+    ['web', 'd-and-n-blog',       'd&n.blog',                 'http://dallasandnicole.com/'],
     ['web', 'd-and-n-wedding',    'd&n.wedding',              'http://wedding.dallasandnicole.com'],
     
     # ['print', 'something',        'Something'],
