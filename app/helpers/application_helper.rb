@@ -10,6 +10,17 @@ module ApplicationHelper
     end
   end
   
+  def navigation
+    navigation_items = %w(web)# print art contact)
+    content_tag(:ul,
+      navigation_items.map do |item|
+        page_path = portfolio_path(item)
+        content_tag(:li, current_page?(page_path) ? content_tag(:span, item) : link_to(item, portfolio_path(item)), :class => 'column')
+      end.join,
+      :id => 'navigation'
+    )
+  end
+  
   def paragraphs
     @paragraphs ||= case params[:portfolio].to_s
     when 'web'

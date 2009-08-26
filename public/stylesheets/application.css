@@ -105,17 +105,15 @@ body.print  .scroller-wrapper .right-arrow  { background-position:bottom right; 
 
 #navigation li { list-style-type:none; }
 
-#navigation li.border {
-  margin-right:10px;
-  padding-right:10px;
-}
-
 #navigation li a,
 #navigation li span {
-  padding:0 2px;
+  margin-right:0.5em;
+  padding:1px 4px;
   font-size:16px;
   text-decoration:none;
   color:#fffdd8;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
 }
 
 #navigation li a:hover,

@@ -17,14 +17,7 @@
           <h1>dallas.reedy</h1>
       </div>
       
-      <ul id="navigation">
-        <li class="column border">
-          <%= link_to_unless_current 'web', portfolio_path('web') do |n|; content_tag(:span, n); end %>
-        </li>
-        <li class="column border last">
-          <%= link_to_unless_current 'print', portfolio_path('print') do |n|; content_tag(:span, n); end %>
-        </li>
-      </ul>
+      <%= navigation %>
     </div>
     
     <div id="main" class="container">
@@ -32,7 +25,9 @@
     </div>
     
     <div id="footer">
-      
+      <p id="github">
+        Check me out on <%= link_to(image_tag('github_logo.png', :height => '20px'), 'http://github.com/dallas', :target => '_blank') %>.
+      </p>
     </div>
   </div>
   
