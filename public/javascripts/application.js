@@ -15,7 +15,7 @@ move = function(dir) {
   var amount = dir == 'next' ? -w : w;
   if (dir == 'prev') preMove();
   $('.scroller li').each(function() {
-    $(this).animate({left:'+=' + amount}, 1000, 'swing', endMove);
+    $(this).animate({left:'+=' + amount}, 500, 'swing', endMove);
   });
 }
 
