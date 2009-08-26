@@ -26,9 +26,9 @@ module ApplicationHelper
     I’m Dallas and I live in Walla Walla, Washington. I graduated from
     #{link_to 'Walla Walla College (University)', 'http://www.wallawalla.edu/', :target => '_blank'}
     in 2006 with a B.S. in
-    #{link_to_unless_current 'Graphic Design', portfolio_path('print')}
+    #{link_to_unless true, 'Graphic Design', portfolio_path('print')}
     but I’ve been doing
-    #{link_to_unless_current 'web development', portfolio_path('web')}
+    #{link_to_unless true, 'web development', portfolio_path('web')}
     since early 2007. I
     #{link_to 'got married', 'http://wedding.dallasandnicole.com/', :target => '_blank'}
     in the summer of 2008 and my wife and I have
