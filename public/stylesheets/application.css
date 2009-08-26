@@ -15,15 +15,19 @@ body {
   letter-spacing:0.03em;
 }
 
-body.web    { background-color:#da8000; }
-body.print  { background-color:#00bda5; }
+body.web      { background-color:#da8000; }
+body.print    { background-color:#00bda5; }
+body.art      { background-color:#00bda5; }
+body.contact  { background-color:#00bda5; }
 
 *:focus { outline:0; }
 
 a { color:#fff; text-decoration:underline; }
-body.web    a:hover { color:#ad6600; text-decoration:none; }
-body.print  a:hover { color:#009783; text-decoration:none; }
-/*a:visited { color:#dfdc96; }*/
+a:hover { color:#fffdd8; text-decoration:none; }
+body.web      a:hover { color:#ad6600; }
+body.print    a:hover { color:#009783; }
+body.art      a:hover { color:#009783; }
+body.contact  a:hover { color:#009783; }
 a:active { color:#eeecc2; }
 
 /*****************
@@ -58,10 +62,12 @@ a:active { color:#eeecc2; }
 .scroller-wrapper .left-arrow   { left:-24px; }
 .scroller-wrapper .right-arrow  { right:-24px; }
 
-body.web    .scroller-wrapper .left-arrow   { background-position:top left; }
-body.web    .scroller-wrapper .right-arrow  { background-position:top right; }
-body.print  .scroller-wrapper .left-arrow   { background-position:bottom left; }
-body.print  .scroller-wrapper .right-arrow  { background-position:bottom right; }
+body.web    .scroller-wrapper .left-arrow   { background-position:left  top; }
+body.web    .scroller-wrapper .right-arrow  { background-position:right top; }
+body.print  .scroller-wrapper .left-arrow   { background-position:left  center; }
+body.print  .scroller-wrapper .right-arrow  { background-position:right center; }
+body.art    .scroller-wrapper .left-arrow   { background-position:left  bottom; }
+body.art    .scroller-wrapper .right-arrow  { background-position:right bottom; }
 
 .scroller {
   width:100%;
@@ -96,7 +102,7 @@ body.print  .scroller-wrapper .right-arrow  { background-position:bottom right; 
 
 #navigation {
   position:absolute;
-  top:66px;
+  top:58px;
   left:485px;
   padding:0;
   margin:0;
@@ -121,9 +127,12 @@ body.print  .scroller-wrapper .right-arrow  { background-position:bottom right; 
 
 body.web #navigation li a:hover,
 body.web #navigation li span { color:#da8000; }
-
 body.print #navigation li a:hover,
 body.print #navigation li span { color:#00bda5; }
+body.art #navigation li a:hover,
+body.art #navigation li span { color:#00bda5; }
+body.contact #navigation li a:hover,
+body.contact #navigation li span { color:#00bda5; }
 
 #screenshots { width:950px; }
 
@@ -146,22 +155,47 @@ body.print #navigation li span { color:#00bda5; }
   list-style-type:none;
 }
 
-/*body.web #screenshots ol li { border-color:#ad6600; }
-body.print #screenshots ol li { border-color:#009783; }*/
-
-#mainCopy {
+#main {
   font-size:16px;
   line-height:2;
 }
 
-#mainCopy p.column {
+#main p.column {
   width:303px;
   margin:0;
   padding:0 10px;
 }
-#mainCopy p.first { padding-left:0; }
-#mainCopy p.last { padding-right:0; }
+#main p.first { padding-left:0; }
+#main p.last { padding-right:0; }
 
-#footer {
-  height:50px;
+#footer { position:relative; height:50px; }
+
+#github {
+  position:absolute;
+  right:5px;
+  bottom:5px;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:14px;
+}
+
+#github .column { margin:0; }
+
+#github span.column {
+  margin-right:0.25em;
+  color:#333;
+  opacity:0.65;
+}
+
+#githubLink.column {
+  display:block;
+  width:45px;
+  height:21px;
+  margin-top:1px;
+  background:transparent url(/images/github_logo.png) no-repeat top left;
+  text-indent:-9000px;
+  overflow:hidden;
+}
+
+#githubLink:hover {
+  background-position:bottom left;
 }

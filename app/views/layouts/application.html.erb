@@ -10,7 +10,7 @@
   <%= stylesheet_link_tag('application', :media => 'screen, projection') %>
 </head>
 
-<body class="<%= params[:portfolio] %>">
+<body class="<%= controller.controller_name == 'application' && controller.action_name == 'index' ? params[:portfolio] : controller.action_name %>">
   <div id="page">
     <div id="header">
       <div id="siteId">
@@ -26,7 +26,8 @@
     
     <div id="footer">
       <p id="github">
-        Check me out on <%= link_to(image_tag('github_logo.png', :height => '20px'), 'http://github.com/dallas', :target => '_blank') %>.
+        <span class="column">check me out on</span>
+        <%= link_to('github', 'http://github.com/dallas', :id => 'githubLink', :class => 'column', :target => '_blank') %>
       </p>
     </div>
   </div>

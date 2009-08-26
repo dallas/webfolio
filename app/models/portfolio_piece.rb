@@ -26,6 +26,10 @@ class PortfolioPiece < Struct.new(:category, :slug, :title, :url)
     def print
       all.select {|p| p.category == 'print'}
     end
+    
+    def art
+      all.select {|p| p.category == 'art'}
+    end
   end
   
   def image_path(size = :thumb)

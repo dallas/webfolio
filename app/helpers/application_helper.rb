@@ -11,14 +11,29 @@ module ApplicationHelper
   end
   
   def navigation
-    navigation_items = %w(web)# print art contact)
+    # navigation_items = [['web', portfolio_path('web')], ['print', portfolio_path('print')], ['art', portfolio_path('art')], ['contact', contact_path]]
+    navigation_items = [['web', portfolio_path('web')]]
     content_tag(:ul,
-      navigation_items.map do |item|
-        page_path = portfolio_path(item)
-        content_tag(:li, current_page?(page_path) ? content_tag(:span, item) : link_to(item, portfolio_path(item)), :class => 'column')
+      navigation_items.map do |(item,url)|
+        content_tag(:li, current_page?(url) ? content_tag(:span, item) : link_to(item, url), :class => 'column')
       end.join,
       :id => 'navigation'
     )
+  end
+  
+  def about_me_paragraph
+    %(<span id="hi">Hi.</span>
+    I’m Dallas and I live in Walla Walla, Washington. I graduated from
+    #{link_to 'Walla Walla College (University)', 'http://www.wallawalla.edu/', :target => '_blank'}
+    in 2006 with a B.S. in
+    #{link_to_unless_current 'Graphic Design', portfolio_path('print')}
+    but I’ve been doing
+    #{link_to_unless_current 'web development', portfolio_path('web')}
+    since early 2007. I
+    #{link_to 'got married', 'http://wedding.dallasandnicole.com/', :target => '_blank'}
+    in the summer of 2008 and my wife and I have
+    #{link_to 'a blog', 'http://dallasandnicole.com/', :target => '_blank'}
+    to share our life with friends and family.)
   end
   
   def paragraphs
@@ -38,7 +53,9 @@ module ApplicationHelper
       #{link_to 'website', 'http://www.adamgotdiana.com/', :target => '_blank'}
       for managing their wedding RSVPs."]
     when 'print'
-      ["one", "two"]
+      ["print#one", "print#two"]
+    when 'art'
+      ["art#one", "art#two"]
     end
   end
 end
