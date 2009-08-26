@@ -3,7 +3,7 @@
     <ol class="scroller">
       <%- @pieces.each do |piece| -%>
         <li class="column span-1">
-          <%= link_to_if(piece.url.present?,
+          <%= link_to_unless(piece.url.blank?,
             image_tag(piece.image_path, :alt => piece.title, :title => piece.title),
             piece.url,
             :target => '_blank'
