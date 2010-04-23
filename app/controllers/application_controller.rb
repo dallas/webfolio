@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  
+
   def index
     @pieces = PortfolioPiece.send(params[:portfolio])
   end
-  
+
   def redirect
     redirect_to portfolio_path('web')
   end

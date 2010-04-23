@@ -17,17 +17,17 @@ body {
 
 body.web      { background-color:#da8000; }
 body.print    { background-color:#00bda5; }
-body.art      { background-color:#00bda5; }
-body.contact  { background-color:#00bda5; }
+body.art      { background-color:#9f02d3; }
+body.contact  { background-color:#555; }
 
 *:focus { outline:0; }
 
-a { color:#fff; text-decoration:underline; }
+a { color:#fffdd8; text-decoration:underline; }
 a:hover { color:#fffdd8; text-decoration:none; }
 body.web      a:hover { color:#ad6600; }
 body.print    a:hover { color:#009783; }
-body.art      a:hover { color:#009783; }
-body.contact  a:hover { color:#009783; }
+body.art      a:hover { color:#77019e; }
+body.contact  a:hover { color:#222; }
 a:active { color:#eeecc2; }
 
 /*****************
@@ -64,8 +64,8 @@ a:active { color:#eeecc2; }
 
 body.web    .scroller-wrapper .left-arrow   { background-position:left  top; }
 body.web    .scroller-wrapper .right-arrow  { background-position:right top; }
-body.print  .scroller-wrapper .left-arrow   { background-position:left  center; }
-body.print  .scroller-wrapper .right-arrow  { background-position:right center; }
+body.print  .scroller-wrapper .left-arrow   { background-position:left  bottom; }
+body.print  .scroller-wrapper .right-arrow  { background-position:right bottom; }
 body.art    .scroller-wrapper .left-arrow   { background-position:left  bottom; }
 body.art    .scroller-wrapper .right-arrow  { background-position:right bottom; }
 
@@ -130,9 +130,9 @@ body.web #navigation li span { color:#da8000; }
 body.print #navigation li a:hover,
 body.print #navigation li span { color:#00bda5; }
 body.art #navigation li a:hover,
-body.art #navigation li span { color:#00bda5; }
+body.art #navigation li span { color:#9f02d3; }
 body.contact #navigation li a:hover,
-body.contact #navigation li span { color:#00bda5; }
+body.contact #navigation li span { color:#555; }
 
 #screenshots { width:950px; }
 
