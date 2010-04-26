@@ -1,10 +1,8 @@
 require 'rubygems'
 require 'vendor/sinatra/lib/sinatra'
 
-Sinatra::Application.default_options.merge!(
-  :run => false,
-  :env => :production
-)
+Sinatra::Base.disable :run
+Sinatra::Base.set :environment, :production
 
 require 'vendor/haml/lib/haml'
 require 'webfolio'
