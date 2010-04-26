@@ -1,7 +1,5 @@
 require 'portfolio_piece'
 
-set :environment, :development
-
 # Pages
 get %r{^/(\w+)?$} do |section|
   section ||= 'web'
