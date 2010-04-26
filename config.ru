@@ -1,6 +1,12 @@
 require 'rubygems'
-require 'webfolio'
+require 'vendor/sinatra/lib/sinatra'
 
-RACK_ENV = :development
+Sinatra::Application.default_options.merge! {
+  :run => false,
+  :env => :production
+}
+
+require 'vendor/haml/lib/haml'
+require 'webfolio'
 
 run Sinatra::Application

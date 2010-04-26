@@ -1,5 +1,3 @@
-require 'sinatra'
-require 'haml'
 require 'portfolio_piece'
 
 set :environment, :development
