@@ -1,16 +1,11 @@
 == My WebFolio
 
-…foolio!
-
+Fo' shizzle!
 
 == To Do
 
-* Bug DreamHost non-stop until they upgrade my server to Rails >= 2.3.2, Passenger >= 2.2.4 and Rack >= 1.0.0
-* Add the Print section
-* Add the Art section
 * Add the Contact page
-
 
 ---
 
-Copyright © 2009 Dallas Reedy, released under the MIT license
+Copyright © 2009–2010 Dallas Reedy
