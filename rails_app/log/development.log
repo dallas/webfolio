@@ -1436,3 +1436,21 @@ Rendering template within layouts/application
 Rendering application/contact
 Rendered application/_about_me (1.0ms)
 Completed in 5ms (View: 4, DB: 0) | 200 OK [http://dr.local/contact]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-23 07:18:49) [GET]
+  Parameters: {"portfolio"=>"print"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered application/_about_me (1.6ms)
+Rendered application/_print (5.3ms)
+Completed in 149ms (View: 145, DB: 0) | 200 OK [http://dr.local/print]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-24 19:19:01) [GET]
+  Parameters: {"portfolio"=>"print"}
+Rendering template within layouts/application
+Rendering application/index
+Rendered application/_about_me (2.4ms)
+Rendered application/_print (6.2ms)
+Completed in 166ms (View: 160, DB: 0) | 200 OK [http://dr.local/print]

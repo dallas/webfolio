@@ -1,0 +1,327 @@
+.border
+  padding-right: 4px
+  margin-right: 5px
+  border-right: 1px solid #fffdd8
+
+  &.last
+    padding-right: 0
+    margin-right: 10px
+    border-right: 0
+
+
+.prepend-top
+  margin-top: 30px
+
+
+.prepend-bottom
+  margin-bottom: 30px
+
+
+body
+  color: #fffdd8
+  font-family: Georgia, "Times New Roman", serif
+  letter-spacing: 0.03em
+
+  &.web
+    background-color: #da8000
+
+  &.print
+    background-color: #00bda5
+
+  &.art
+    background-color: #9f02d3
+
+  &.sketchbook
+    background-color: #1f80ed
+
+  &.contact
+    background-color: #555
+
+  &.colophon
+    background-color: #92c30d
+
+
+*:focus
+  outline: 0
+
+
+a
+  color: #fffdd8
+  text-decoration: underline
+
+  &:visited
+    color: #fffdd8
+
+  &:hover
+    color: #fffdd8
+    text-decoration: none
+
+
+body
+  &.web a:hover
+    color: #ad6600
+
+  &.print a:hover
+    color: #009783
+
+  &.art a:hover
+    color: #77019e
+
+  &.sketchbook a:hover
+    color: #2e6eb5
+
+  &.contact a:hover
+    color: #222
+
+  &.colophon
+    color: #6b9006
+
+  &.web, &.print, &.art, &.sketchbook, &.contact, &.colophon
+    a:focus, a:active
+      color: #fff
+
+
+h1, h2, h3, h4, h5, h6
+  margin-bottom: .25em
+
+body
+  &.web
+    h1, h2, h3, h4, h5, h6
+      text-shadow: -1px 1px 1px #e2b980
+
+  &.print
+    h1, h2, h3, h4, h5, h6
+      text-shadow: -1px 1px 1px #a0dcd4
+
+  &.art
+    h1, h2, h3, h4, h5, h6
+      text-shadow: -1px 1px 1px #c88ddc
+
+  &.sketchbook
+    h1, h2, h3, h4, h5, h6
+      text-shadow: -1px 1px 1px #84b0e1
+
+  &.contact
+    h1, h2, h3, h4, h5, h6
+      text-shadow: -1px 1px 1px #797979
+
+  &.colophon
+    h1, h2, h3, h4, h5, h6
+      text-shadow: -1px 1px 1px #cedea1
+
+
+.scroller-wrapper
+  position: relative
+  width: 100%
+  height: 100%
+
+
+.scroller-container
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+
+.scroller-wrapper
+  .left-arrow, .right-arrow
+    position: absolute
+    top: 50%
+    display: block
+    width: 49px
+    height: 49px
+    margin: -26px 0 0
+    background: transparent url(/img/arrows.png) no-repeat top left
+    text-indent: -9000px
+    overflow: hidden
+    z-index: 2
+
+  .left-arrow
+    left: -24px
+
+  .right-arrow
+    right: -24px
+
+
+body
+  &.web .scroller-wrapper
+    .left-arrow
+      background-position: 0 0
+
+    .right-arrow
+      background-position: -49px 0
+
+  &.print .scroller-wrapper
+    .left-arrow
+      background-position: 0 -49px
+
+    .right-arrow
+      background-position: -49px -49px
+
+  &.art .scroller-wrapper
+    .left-arrow
+      background-position: 0 -98px
+
+    .right-arrow
+      background-position: -49px -98px
+
+  &.sketchbook .scroller-wrapper
+    .left-arrow
+      background-position: 0 -147px
+
+    .right-arrow
+      background-position: -49px -147px
+
+
+.scroller
+  width: 100%
+  height: 100%
+  overflow: visible
+
+
+#page
+  width: 960px
+  margin: 50px auto 25px
+
+
+#header
+  position: relative
+  height: 110px
+
+
+h1#siteId
+  position: absolute
+  top: 25px
+  left: 0
+  display: block
+  width: 477px
+  height: 80px
+  background: transparent url(/img/dallasreedy.png) no-repeat top left
+  text-indent: -500px
+  overflow: hidden
+
+
+#navigation
+  position: absolute
+  top: 58px
+  left: 485px
+  padding: 0
+  margin: 0
+  list-style-type: none
+
+  li
+    list-style-type: none
+
+    a, span
+      margin-right: 0.5em
+      padding: 1px 4px
+      font-size: 16px
+      text-decoration: none
+      color: #fffdd8
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+
+    a:hover
+      background-color: #fffdd8
+
+  span
+    background-color: #fffdd8
+
+
+body
+  &.web #navigation li
+    a:hover, span
+      color: #da8000
+
+  &.print #navigation li
+    a:hover, span
+      color: #00bda5
+
+  &.art #navigation li
+    a:hover, span
+      color: #9f02d3
+
+  &.sketchbook #navigation li
+    a:hover, span
+      color: #1f80ed
+
+  &.contact #navigation li
+    a:hover, span
+      color: #555
+
+  &.colophon #navigation li
+    a:hover, span
+      color: #92c30d
+
+
+#imageThumbs
+  width: 950px
+
+  ol
+    position: relative
+    width: 960px
+    height: 150px
+    margin: 0
+    padding: 0
+    list-style-type: none
+    overflow: hidden
+
+    li
+      width: 146px !important
+      height: 146px
+      padding: 1px
+      border: 1px solid #fffdd8
+      background: none
+      list-style-type: none
+
+
+#main
+  font-size: 15px
+  line-height: 1.75
+
+  div
+    &.column
+      width: 303px
+      margin: 0
+      padding: 0 10px
+
+    &.first
+      padding-left: 0
+
+    &.last
+      padding-right: 0
+      padding-top: 29px
+
+
+#footer
+  position: relative
+  height: 50px
+
+
+#github
+  position: absolute
+  right: 5px
+  bottom: 5px
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 14px
+
+  .column
+    margin: 0
+
+  span.column
+    margin-right: 0.25em
+    color: #333
+    opacity: 0.65
+
+
+#githubLink
+  &.column
+    display: block
+    width: 45px
+    height: 21px
+    margin-top: 1px
+    background: transparent url(/img/github_logo.png) no-repeat top left
+    text-indent: -9000px
+    overflow: hidden
+
+  &:hover
+    background-position: bottom left

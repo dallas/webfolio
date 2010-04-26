@@ -1,0 +1,28 @@
+!!! 5
+
+%html
+  %head
+    %meta{'http-equiv' => 'Content-type', :content => 'text/html; charset=utf-8'}
+    %title Dallas Reedy » Walla Walla, WA » Ruby on Rails web developer
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/sass/screen.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'print', :href => '/sass/print.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/css/colorbox-3.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/sass/application.css'}
+
+  %body(class=@section)
+    #page
+      #header
+        %h1#siteId dallas.reedy
+        = haml :_navigation, :layout => false
+
+      #main.container
+        = yield
+
+      #footer
+        %p#github
+          %span.column check me out on
+          %a#githubLink.column{:href => 'http://github.com/dallas', :target => '_blank'} github
+
+    %script{:type => 'text/javascript', :src => '/js/jquery-1.4.2.min.js'}
+    %script{:type => 'text/javascript', :src => '/js/jquery.colorbox-min.js'}
+    %script{:type => 'text/javascript', :src => '/js/application.js'}

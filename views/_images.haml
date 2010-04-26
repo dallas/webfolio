@@ -1,0 +1,14 @@
+#imageThumbs.container.scroller-wrapper
+  .scroller-container
+    %ol.scroller
+      - @works.each do |work|
+        %li.column.span-1
+          - unless work.url.nil?
+            %a{:href => work.url, :rel => 'gallery', :target => ('_blank' if work.external?)}
+              %img{:src => work.image_src, :alt => work.title, :title => work.title}
+          - else
+            %img{:src => work.image_src, :alt => work.title, :title => work.title}
+
+  - if @works.length > 6
+    %a.right-arrow{:href => '#next'} next
+    %a.left-arrow{:href => '#previous'} previous
