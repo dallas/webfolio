@@ -1,7 +1,17 @@
+// Colors
+!text     = #fffdd8
+!default  = #555
+!web      = #da8000
+!print    = #00bda5
+!art      = #9f02d3
+!process  = #1f80ed
+!colophon = #92c30d
+!hilite   = #181818
+
 .border
   padding-right: 4px
   margin-right: 5px
-  border-right: 1px solid #fffdd8
+  border-right = 1px solid !text
 
   &.last
     padding-right: 0
@@ -18,27 +28,31 @@
 
 
 body
-  color: #fffdd8
+  background-color = !default
+  color = !text
   font-family: Georgia, "Times New Roman", serif
   letter-spacing: 0.03em
+  text-shadow: 1px -1px !default - !hilite
 
   &.web
-    background-color: #da8000
+    background-color = !web
+    text-shadow = 1px -1px !web - !hilite
 
   &.print
-    background-color: #00bda5
+    background-color = !print
+    text-shadow = 1px -1px !print - !hilite
 
   &.art
-    background-color: #9f02d3
+    background-color = !art
+    text-shadow = 1px -1px !art - !hilite
 
-  &.sketchbook
-    background-color: #1f80ed
-
-  &.contact
-    background-color: #555
+  &.process
+    background-color = !process
+    text-shadow = 1px -1px !process - !hilite
 
   &.colophon
-    background-color: #92c30d
+    background-color = !colophon
+    text-shadow = 1px -1px !colophon - !hilite
 
 
 *:focus
@@ -46,16 +60,19 @@ body
 
 
 a
-  color: #fffdd8
+  color = !text
   text-decoration: underline
 
   &:visited
-    color: #fffdd8
+    color = !text
 
   &:hover
-    color: #fffdd8
+    color = !text
     text-decoration: none
 
+a:hover
+  color: #222
+  text-shadow: -1px 1px #666
 
 body
   &.web a:hover
@@ -67,47 +84,41 @@ body
   &.art a:hover
     color: #77019e
 
-  &.sketchbook a:hover
+  &.process a:hover
     color: #2e6eb5
-
-  &.contact a:hover
-    color: #222
 
   &.colophon
     color: #6b9006
 
-  &.web, &.print, &.art, &.sketchbook, &.contact, &.colophon
+  &.web, &.print, &.art, &.process, &.contact, &.colophon
     a:focus, a:active
       color: #fff
 
 
 h1, h2, h3, h4, h5, h6
   margin-bottom: .25em
+  text-shadow = -1px 1px !default + !hilite
 
 body
   &.web
     h1, h2, h3, h4, h5, h6
-      text-shadow: -1px 1px 1px #e2b980
+      text-shadow = -1px 1px !web + !hilite
 
   &.print
     h1, h2, h3, h4, h5, h6
-      text-shadow: -1px 1px 1px #a0dcd4
+      text-shadow = -1px 1px !print + !hilite
 
   &.art
     h1, h2, h3, h4, h5, h6
-      text-shadow: -1px 1px 1px #c88ddc
+      text-shadow = -1px 1px !art + !hilite
 
-  &.sketchbook
+  &.process
     h1, h2, h3, h4, h5, h6
-      text-shadow: -1px 1px 1px #84b0e1
-
-  &.contact
-    h1, h2, h3, h4, h5, h6
-      text-shadow: -1px 1px 1px #797979
+      text-shadow = -1px 1px !process + !hilite
 
   &.colophon
     h1, h2, h3, h4, h5, h6
-      text-shadow: -1px 1px 1px #cedea1
+      text-shadow = -1px 1px !colophon + !hilite
 
 
 .scroller-wrapper
@@ -164,7 +175,7 @@ body
     .right-arrow
       background-position: -49px -98px
 
-  &.sketchbook .scroller-wrapper
+  &.process .scroller-wrapper
     .left-arrow
       background-position: 0 -147px
 
@@ -212,45 +223,45 @@ h1#siteId
     list-style-type: none
 
     a, span
-      margin-right: 0.5em
-      padding: 1px 4px
-      font-size: 16px
-      text-decoration: none
-      color: #fffdd8
       -webkit-border-radius: 4px
       -moz-border-radius: 4px
+      color = !text
+      font-size: 16px
+      margin-right: 0.5em
+      padding: 1px 4px
+      text-decoration: none
+
+    a:hover, span
+      color = !default
+      text-shadow: -1px 1px #fff
 
     a:hover
-      background-color: #fffdd8
+      background-color = !text
 
-  span
-    background-color: #fffdd8
+    span
+      background-color = !text
 
 
 body
   &.web #navigation li
     a:hover, span
-      color: #da8000
+      color = !web
 
   &.print #navigation li
     a:hover, span
-      color: #00bda5
+      color = !print
 
   &.art #navigation li
     a:hover, span
-      color: #9f02d3
+      color = !art
 
-  &.sketchbook #navigation li
+  &.process #navigation li
     a:hover, span
-      color: #1f80ed
-
-  &.contact #navigation li
-    a:hover, span
-      color: #555
+      color = !process
 
   &.colophon #navigation li
     a:hover, span
-      color: #92c30d
+      color = !colophon
 
 
 #imageThumbs
@@ -269,7 +280,7 @@ body
       width: 146px !important
       height: 146px
       padding: 1px
-      border: 1px solid #fffdd8
+      border = 1px solid !text
       background: none
       list-style-type: none
 
