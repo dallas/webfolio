@@ -1,1 +1,13 @@
-%h2 Contact me!
+-# haml :_images, :layout => false
+
+#mainCopy.container.prepend-top
+  .column.span-2.first
+    = haml :_about_me, :layout => false
+
+- unless true
+  .column.span-2
+    %h3 Contact Me!
+    %p
+
+  .column.span-2.last
+    %p

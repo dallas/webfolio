@@ -1,6 +1,6 @@
 %ul#navigation
-  / - %w[web print art sketchbook contact colophon].each do |item|
-  - %w[web print art sketchbook].each do |item|
+  / - %w[web print art process contact colophon].each do |item|
+  - %w[web print art process contact].each do |item|
     %li.column
       - unless @section == item
         %a{:href => "/#{item}"}= item

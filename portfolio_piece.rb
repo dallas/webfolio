@@ -24,7 +24,7 @@ class PortfolioPiece < Struct.new(:category, :slug, :title, :href)
     ['art', 'lite-stripes',   'Lite Stripes',   lambda{|p| p.image_src :large }],
     ['art', 'bright-stripes', 'Bright Stripes', lambda{|p| p.image_src :large }],
 
-    ['sketch',  'aswwc-radio',  'ASWWC Radio',  lambda{|p| p.image_src :large }]
+    ['process',  'aswwc-radio',  'ASWWC Radio',  lambda{|p| p.image_src :large }]
   ]
 
   class << self
@@ -46,8 +46,8 @@ class PortfolioPiece < Struct.new(:category, :slug, :title, :href)
       all.select {|p| p.category == 'art'}
     end
 
-    def sketchbook
-      all.select {|p| p.category == 'sketch'}
+    def process
+      all.select {|p| p.category == 'process'}
     end
   end
 
