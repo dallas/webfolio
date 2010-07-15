@@ -32,27 +32,25 @@ body
   color = !text
   font-family: Georgia, "Times New Roman", serif
   letter-spacing: 0.03em
-  text-shadow: 1px -1px !default - !hilite
+  text-shadow: 1px -1px rgba(0,0,0,0.25)
 
   &.web
     background-color = !web
-    text-shadow = 1px -1px !web - !hilite
 
   &.print
     background-color = !print
-    text-shadow = 1px -1px !print - !hilite
 
   &.art
     background-color = !art
-    text-shadow = 1px -1px !art - !hilite
 
   &.process
     background-color = !process
-    text-shadow = 1px -1px !process - !hilite
+
+  &.contact
+    text-shadow: 1px -1px rgba(0,0,0,0.65)
 
   &.colophon
     background-color = !colophon
-    text-shadow = 1px -1px !colophon - !hilite
 
 
 *:focus
@@ -60,8 +58,9 @@ body
 
 
 a
+  border-bottom = 1px dotted !text
   color = !text
-  text-decoration: underline
+  text-decoration: none
 
   &:visited
     color = !text
@@ -71,54 +70,47 @@ a
     text-decoration: none
 
 a:hover
+  border-bottom-color: #222 
   color: #222
-  text-shadow: -1px 1px #666
+  text-shadow: -1px 1px rgba(255,255,255,0.3)
 
 body
   &.web a:hover
-    color: #ad6600
+    border-bottom-color = #ad6600 - #333
+    color = #ad6600 - #333
 
   &.print a:hover
-    color: #009783
+    border-bottom-color = #009783 - #333
+    color = #009783 - #333
 
   &.art a:hover
-    color: #77019e
+    border-bottom-color = #77019e - #333
+    color = #77019e - #333
 
   &.process a:hover
-    color: #2e6eb5
+    border-bottom-color = #2e6eb5 - #333
+    color = #2e6eb5 - #333
+
+  &.contact a:hover
+    text-shadow: -1px 1px rgba(255,255,255,0.2)
 
   &.colophon
-    color: #6b9006
+    border-bottom-color = #6b9006 - #333
+    color = #6b9006 - #333
 
   &.web, &.print, &.art, &.process, &.contact, &.colophon
     a:focus, a:active
       color: #fff
+      text-shadow: none
 
 
 h1, h2, h3, h4, h5, h6
   margin-bottom: .25em
-  text-shadow = -1px 1px !default + !hilite
+  text-shadow: -1px 1px rgba(255,255,255,0.4)
 
-body
-  &.web
-    h1, h2, h3, h4, h5, h6
-      text-shadow = -1px 1px !web + !hilite
-
-  &.print
-    h1, h2, h3, h4, h5, h6
-      text-shadow = -1px 1px !print + !hilite
-
-  &.art
-    h1, h2, h3, h4, h5, h6
-      text-shadow = -1px 1px !art + !hilite
-
-  &.process
-    h1, h2, h3, h4, h5, h6
-      text-shadow = -1px 1px !process + !hilite
-
-  &.colophon
-    h1, h2, h3, h4, h5, h6
-      text-shadow = -1px 1px !colophon + !hilite
+body.contact
+  h1, h2, h3, h4, h5, h6
+    text-shadow: -1px 1px rgba(255,255,255,0.2)
 
 
 .scroller-wrapper
@@ -135,6 +127,7 @@ body
 
 .scroller-wrapper
   .left-arrow, .right-arrow
+    border-bottom: 0
     position: absolute
     top: 50%
     display: block
@@ -224,7 +217,11 @@ h1#siteId
 
     a, span
       -webkit-border-radius: 4px
+      -khtml-border-radius: 4px
       -moz-border-radius: 4px
+      -o-border-radius: 4px
+      border-radius: 4px
+      border-bottom: 0
       color = !text
       font-size: 16px
       margin-right: 0.5em
@@ -233,7 +230,7 @@ h1#siteId
 
     a:hover, span
       color = !default
-      text-shadow: -1px 1px #fff
+      text-shadow: none
 
     a:hover
       background-color = !text
@@ -322,9 +319,16 @@ body
     margin-right: 0.25em
     color: #333
     opacity: 0.65
+    text-shadow: -1px 1px rgba(255,255,255,0.3)
 
+
+body.contact #github span.column
+  text-shadow: -1px 1px rgba(255,255,255,0.2)
+  
 
 #githubLink
+  border-bottom: 0
+
   &.column
     display: block
     width: 45px
