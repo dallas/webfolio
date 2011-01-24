@@ -1,6 +1,6 @@
 class PortfolioPiece < Struct.new(:category, :slug, :title, :href)
   PIECES = [
-    ['web', 'quality-smith-pro',  'QSPro.com',                'http://www.qspro.com/'],
+    # ['web', 'quality-smith-pro',  'QSPro.com',                'http://www.qspro.com/'],
     ['web', 'american-winery',    'AmericanWinery.com',       'http://www.americanwinery.com/'],
     ['web', 'wineraq',            'WineRAQ',                  'http://wineraq.com/'],
     ['web', 'premier-cellar',     'PremierCellar',            'http://premiercellar.com/'],
