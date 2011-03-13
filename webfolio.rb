@@ -2,6 +2,10 @@ require 'portfolio_piece'
 
 # Pages
 
+get '/app/env' do
+  "#{settings.environment}"
+end
+
 get '/resume' do
   redirect '/resume.pdf'
 end
