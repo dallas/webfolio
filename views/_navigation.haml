@@ -1,8 +1,10 @@
 %ul#navigation
   / - %w[web print art process contact colophon].each do |item|
-  - %w[web print art process contact].each do |item|
+  - %w[web print art process].each do |item|
     %li.column
       - unless @section == item
         %a{:href => "/#{item}"}= item
       - else
         %span= item
+  %li.column
+    %a{:href => '/resume'} résumé

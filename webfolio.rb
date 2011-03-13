@@ -2,6 +2,10 @@ require 'portfolio_piece'
 
 # Pages
 
+get '/resume' do
+  redirect '/resume.pdf'
+end
+
 post '/contact' do
   # Pony.mail(:to => 'you@example.com', :via => :smtp, :via_options => {
   #   :address              => 'smtp.gmail.com',
