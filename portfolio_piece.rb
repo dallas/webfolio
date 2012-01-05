@@ -9,6 +9,7 @@ class PortfolioPiece < Struct.new(:category, :slug, :title, :href)
     ['web', 'american-winery',    'AmericanWinery.com',       'http://www.americanwinery.com/'],
     ['web', 'le-grand-cru',       'Le Grand Cru',             'http://legrandcru.us/'],
     ['web', 'le-grand-cru-blog',  'Le Blog of Le Grand Cru',  'http://blog.legrandcru.us/'],
+    ['web', 'sda-hpera', 'SDA-HPERA.org', 'http://sdahpera.org/'],
     ['web', 'eastside-road', 'Eastside Rd.', 'http://eastsiderd.com/'],
     # ['web', 'd-and-n-blog',       'd&n.blog',                 'http://dallasandnicole.com/'],
 
