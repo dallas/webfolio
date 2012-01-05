@@ -1,13 +1,16 @@
+# encoding: utf-8
+
 class PortfolioPiece < Struct.new(:category, :slug, :title, :href)
   PIECES = [
-    # ['web', 'quality-smith-pro',  'QSPro.com',                'http://www.qspro.com/'],
+    ['web', 'spyder', 'Spyder.com', 'http://spyder.com/'],
+    ['web', 'phiten', 'Phiten USA', 'http://explore.phitenusa.com/athletes'],
+    ['web', 'band-of-buds', 'Budweiser’s Band of Buds', 'http://bandofbuds.com/'],
+    ['web', 'quality-smith-email', 'QualitySmith.com HTML Email Redesign', 'http://www.qualitysmith.com/'],
     ['web', 'american-winery',    'AmericanWinery.com',       'http://www.americanwinery.com/'],
-    ['web', 'wineraq',            'WineRAQ',                  'http://wineraq.com/'],
-    ['web', 'premier-cellar',     'PremierCellar',            'http://premiercellar.com/'],
-    ['web', 'wine-store',         'Online WineStores',        'http://www.americanwinery.com/triovintners'],
     ['web', 'le-grand-cru',       'Le Grand Cru',             'http://legrandcru.us/'],
     ['web', 'le-grand-cru-blog',  'Le Blog of Le Grand Cru',  'http://blog.legrandcru.us/'],
-    ['web', 'd-and-n-blog',       'd&n.blog',                 'http://dallasandnicole.com/'],
+    ['web', 'eastside-road', 'Eastside Rd.', 'http://eastsiderd.com/'],
+    # ['web', 'd-and-n-blog',       'd&n.blog',                 'http://dallasandnicole.com/'],
 
     ['print', 'guerilla-poster',      'Guerilla Poster',                lambda{|p| p.image_src :large }],
     ['print', 'moonlight-poster',     'Moonlight Poster',               lambda{|p| p.image_src :large }],

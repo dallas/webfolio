@@ -1,10 +1,16 @@
 %h3 Hello
 %p
-  I’m Dallas and I live in Seattle, Washington. I graduated from
-  <a href="http://www.wallawalla.edu/" target="_blank">Walla Walla University</a> in 2006 with a 
-  Bachelors of Science degree in <a href="/print">graphic design</a> but I’ve been doing
-  <a href="/web">web development & design</a> since early 2007. I feel the most important part of 
-  any project is the <a href="/process">planning</a> phase. Whenever I feel the need to be truly 
-  artistic and creative, I dabble in some of the finer <a href="/art">arts</a>. Take a look around 
-  and <a href="mailto:%68%69%72%65@%64%61%6c%6c%61%73%72%65%65%64%79.%63%6f%6d">drop me a line</a> 
+  I’m Dallas and I live in Seattle, Washington. I graduated from 
+  %a{:href => 'http://www.wallawalla.edu/', :target => '_blank'} Walla Walla University 
+  in 2006 with a Bachelors of Science degree in 
+  %a{:href => '/print'} graphic design 
+  but I’ve been doing 
+  %a{:href => '/web'} web development & design 
+  since early 2007. I feel the most important part of any project is the 
+  %a{:href => '/process'} planning 
+  phase. Whenever I feel the need to be truly artistic and creative, I dabble in some of the finer 
+  = succeed '.' do
+    %a{:href => '/art'} arts
+  Take a look around and 
+  %a{:href => 'mailto:%68%69%72%65@%64%61%6c%6c%61%73%72%65%65%64%79.%63%6f%6d'} drop me a line 
   if you like what you see!
