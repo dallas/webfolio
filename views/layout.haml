@@ -2,14 +2,14 @@
 
 %html
   %head
-    %meta{'http-equiv' => 'Content-type', :content => 'text/html; charset=utf-8'}
+    %meta{:charset => 'utf-8'}
     %title Dallas Reedy » Seattle, WA » Ruby on Rails web developer
-    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/sass/screen.css'}
-    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'print', :href => '/sass/print.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/css/screen.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'print', :href => '/css/print.css'}
     %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/css/colorbox-3.css'}
-    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/sass/application.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen, projection', :href => '/css/application.css'}
 
-  %body(class=@section)
+  %body{:class => @section}
     #page
       #header
         %h1#siteId dallas.reedy

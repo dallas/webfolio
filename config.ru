@@ -1,6 +1,7 @@
 require 'rubygems'
-require 'vendor/sinatra/lib/sinatra'
-require 'vendor/haml/lib/haml'
-require 'webfolio'
+require 'bundler'
 
-run Sinatra::Application
+Bundler.require
+
+require './webfolio'
+run Webfolio
