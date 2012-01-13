@@ -1,6 +1,45 @@
-%h1 HTML & CSS—level 1
+!!!
 
-%ul.menu
-  - (1..5).each do |n|
-    %li
-      %a{:href => "html+css/week-#{n}"}== Week #{n}
+%html
+  %head
+    %meta{:charset => 'utf-8'}
+    %title HTML + CSS level 1 « SVC Seattle
+    %link{:rel => 'stylesheet', :href => 'http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css'}
+    %link{:rel => 'stylesheet', :href => '/svc/css/styles.css' }
+
+  %body
+    #top.topbar
+      .topbar-inner
+        .container
+          %h3
+            %a{:href => 'https://www.svcseattle.com/classes/html-and-css-level-1-reedy-winter-2012'}
+              SVC
+          %ul.nav
+            %li.active
+              %a{:href => '#overview'} Overview
+            %li
+              %a{:href => '#week-1'} Week 1
+            %li
+              %a{:href => '#week-2'} Week 2
+            %li
+              %a{:href => '#week-3'} Week 3
+            %li
+              %a{:href => '#week-4'} Week 4
+            %li
+              %a{:href => '#week-5'} Week 5
+
+    %header#overview.jumbotron.masthead
+      .grid
+      .inner
+        .container
+          %h1
+            HTML & CSS
+            %small Level 1
+          %p
+            Learning the basics of
+            %abbr{:title => 'HyperText Markup Language'} HTML
+            and
+            %abbr{:title => 'Cascading StyleSheets'} CSS
+            for fun and profit!
+
+    %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
