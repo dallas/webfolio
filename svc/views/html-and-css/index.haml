@@ -13,7 +13,7 @@
         .container
           %h3
             %a{:href => 'https://www.svcseattle.com/classes/html-and-css-level-1-reedy-winter-2012'}
-              SVC
+              School of Visual Concepts
           %ul.nav
             %li.active
               %a{:href => '#overview'} Overview
@@ -28,9 +28,9 @@
             %li
               %a{:href => '#week-5'} Week 5
 
-    %header#overview.jumbotron.masthead
-      .grid
+    %header.jumbotron.masthead
       .inner
+        .grid
         .container
           %h1
             HTML & CSS
@@ -38,8 +38,43 @@
           %p
             Learning the basics of
             %abbr{:title => 'HyperText Markup Language'} HTML
-            and
+            &
             %abbr{:title => 'Cascading StyleSheets'} CSS
             for fun and profit!
+
+    %section#overview
+      .container
+        .row
+          %section#instructor.span4
+            %h1 Instructor
+            %h2 Dallas Reedy
+            %dl
+              %dt email
+              %dd dallas@dallasreedy.com
+
+              %dt web
+              %dd dallasreedy.com/html+css
+
+          %section#courseDescription.span6
+            %h1 Course Description
+            %p
+              HTML and CSS are the fundamental building blocks of the web. They are essential 
+              concepts to understand for many of today’s careers. Luckily, they are also fun and 
+              easy to learn! In this course, we’ll be starting from the beginning and building up a 
+              solid, practical foundation in these symbiotic web languages.
+
+          %section#suggestedReading.span6
+            %h1 Suggested Reading
+            .row
+              .span4.offset2
+                %h2
+                  HTML5 & CSS: Visual QuickStart Guide
+                  %small (7th Edition)
+                %h3
+                  by
+                  %span.author Elizabeth Castro
+                  &
+                  %span.author Bruce Hyslop
+              %img{:src => 'images/html5-and-css3.png', :width => 105, :alt => (alt = 'HTML5 and CSS3: Visual QuickStart'), :title => alt}
 
     %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
