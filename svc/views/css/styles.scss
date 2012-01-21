@@ -1,6 +1,9 @@
 @import 'bourbon/bourbon';
 @import url('fonts.css');
 
+body { }
+p { font-size:14px; line-height:1.5; }
+
 abbr {
   font-family:Adelle, Georgia, serif;
   font-style:italic;
@@ -15,7 +18,7 @@ h1 {
 .topbar {
   @include box-shadow(0 0 5px rgba(black, 0.2), 0 0 20px rgba(black, 0.4), 0 0 60px rgba(black, 0.6));
 
-  .container { width:655px; }
+/*  .container { width:655px; }*/
 
   h3 a {
     color:darken(white, 10%);
@@ -40,6 +43,13 @@ h1 {
   color:white;
   padding-top:40px;
 
+  .inner {
+    @include box-shadow(inset 0 10px 50px rgba(black, .5));
+    padding:120px 0 100px;
+    position:relative;
+    z-index:1;
+  }
+
   .grid {
     background-attachment:scroll;
     background-image: url('/svc/images/grid-bg.png'),
@@ -53,13 +63,7 @@ h1 {
     position:absolute;
     right:0;
     top:0;
-  }
-
-  .inner {
-    @include box-shadow(inset 0 10px 50px rgba(black, .5));
-    padding:80px 0;
-    position:relative;
-    z-index:5;
+    z-index:2;
   }
 
   h1, p {
@@ -71,39 +75,34 @@ h1 {
 
   h1 {
     font-family:Adelle, Georgia, serif;
-    font-size:70px;
+    font-size:100px;
     font-weight:700;
     text-shadow:0 1px 0 #ccc,
-                0 2px 0 #c9c9c9,
-                0 3px 0 #bbb,
-                0 4px 0 #b9b9b9,
-                0 5px 0 #aaa,
-                0 5px 1px rgba(black, .3),
-                0 5px 2px rgba(black, .2),
-                0 5px 3px rgba(black, .2),
-                0 6px 4px rgba(black, .15),
-                0 6px 6px rgba(black, .25),
-                0 6px 10px rgba(black, .2);
-/*    text-shadow:0 0 0 rgba(34,55,87, .9),
-                1px 1px 0 rgba(34,55,87, .9),
-                2px 2px 0 rgba(34,55,87, .9),
-                3px 3px 0 rgba(34,55,87, .9),
-                4px 4px 0 rgba(34,55,87, .9),
-                5px 5px 0 rgba(34,55,87, .9),
-                6px 6px 0 rgba(34,55,87, .9),
-                7px 7px 0 rgba(34,55,87, .9);*/
+                0 2px 0 #c6c6c6,
+                0 3px 0 #c0c0c0,
+                0 4px 0 #bcbcbc,
+                0 5px 0 #b6b6b6,
+                0 6px 0 #b0b0b0,
+                0 7px 0 #acacac,
+                0 8px 0 #a6a6a6,
+                0 9px 0 #a0a0a0,
+                0 9px 1px rgba(black, .3),
+                0 9px 2px rgba(black, .2),
+                0 9px 3px rgba(black, .2),
+                0 10px 4px rgba(black, .15),
+                0 10px 6px rgba(black, .25),
+                0 10px 10px rgba(black, .2);
 
     small {
       color:white;
-      font-size:35px;
+      font-size:50px;
       font-style:italic;
-/*      text-transform:uppercase;*/
     }
   }
 
   p {
     font-family:Banda, Helvetica, sans-serif;
-    font-size:24px;
+    font-size:30px;
     font-weight:300;
     line-height:27px;
     text-shadow:-1px -1px 1px rgba(34,55,87, .8),
@@ -114,28 +113,90 @@ h1 {
 .hero-unit h1 small { font-size:36px; }
 
 #overview {
+  @include background-image(
+    radial-gradient(center, ellipse, black 11%, transparent 12%),
+    radial-gradient(center, ellipse, black 11%, transparent 12%),
+    radial-gradient(center, ellipse, rgba(white, .075) 11%, transparent 15%),
+    radial-gradient(center, ellipse, rgba(white, .075) 11%, transparent 15%));
+  background-position:0 0, 6px 6px, 0 1px, 6px 7px;
+  background-color:#1c1c1c;
+  @include background-size(12px 12px);
+
   border-top:1px solid #777;
+
+  @include box-shadow(0 -2px 4px rgba(black, .25));
+
   color:#eee;
-  @include linear-gradient(#222, #333);
   padding-bottom:100px;
   padding-top:60px;
+  position:relative;
+  z-index:5;
 
-  h1 {
-    color:#5ea6ff;
-    text-shadow:0 -1px 1px rgba(black, 0.9),
-                0  1px 1px rgba(white, 0.4);
+  &:after{
+    @include linear-gradient(rgba(black, .6) 0%, rgba(black, 0) 35%, rgba(black, 0) 65%, rgba(black, .6) 100%);
+    background-color:transparent;
+    content:'';
+    display:block;
+    height:100%;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
   }
 
+  h1 {
+    color:#62b0ff;
+    text-shadow:-1px -1px 1px rgba(black, 0.9),
+                1px  1px 1px rgba(lighten(#62b0ff, 25%), .5);
+  }
+
+  h2 { font-family:Banda, Helvetica, sans-serif; }
+
   h2, h3, h4, h5, h6 { color:white; }
+
+  .row {
+    position:relative;
+    z-index:1;
+  }
 }
 
-#suggestedReading {
+#instructor {
+  position:relative;
+  z-index:5;
+
+  img {
+    border:6px solid #333;
+    border-color:rgba(black,0.7);
+    height:auto;
+    left:-6px;
+    position:absolute;
+    top:-125px;
+    width:100px;
+    z-index:1;
+  }
+
+  &:before {
+    @include box-shadow(10px -10px 6px rgba(black, .25));
+    content:'';
+    display:block;
+    height:75px;
+    left:-6px;
+    position:absolute;
+    top:-125px;
+    width:112px;
+    z-index:0;
+  }
+}
+
+#course-materials {
   .row { position:relative; }
 
   img {
     border:2px solid #ddd;
+    height:auto;
     left:20px;
     position:absolute;
     top:9px;
+    width:90px;
   }
 }

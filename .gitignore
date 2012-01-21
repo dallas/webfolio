@@ -1,4 +1,5 @@
 log/
 tmp/
+!.gitkeep
 .DS_Store
 .sass-cache
