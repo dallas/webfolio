@@ -1,11 +1,19 @@
 !!!
 
-%html
+/[if lt IE 7] <html lang="en" class="no-js ie6 oldie">
+/[if IE 7]    <html lang="en" class="no-js ie7 oldie">
+/[if IE 8]    <html lang="en" class="no-js ie8 oldie">
+/[if IE 9]    <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!-->
+%html.no-js{:lang => 'en'}
+  <!--<![endif]-->
   %head
     %meta{:charset => 'utf-8'}
     %title HTML + CSS level 1 « SVC Seattle
-    %link{:rel => 'stylesheet', :href => '/svc/css/lib/twitter-bootstrap.min.css'}
-    %link{:rel => 'stylesheet', :href => '/svc/css/styles.css' }
+    %link{:rel => 'stylesheet', :href => 'css/lib/twitter-bootstrap.min.css'}
+    %link{:rel => 'stylesheet', :href => 'css/styles.css' }
+
+    %script{:src => 'js/lib/modernizr.custom.min.js'}
 
   %body
     #top.topbar
@@ -15,7 +23,9 @@
             %a{:href => 'https://www.svcseattle.com/classes/html-and-css-level-1-reedy-winter-2012'}
               School of Visual Concepts
           %ul.nav
-            %li.active
+            %li
+              %a{:href => '#top'} Top
+            %li
               %a{:href => '#overview'} Overview
             %li
               %a{:href => '#instructor'} Instructor
@@ -88,6 +98,58 @@
                   &
                   %span.author Bruce Hyslop
               %img{:src => 'images/HTML5-and-CSS3.jpg', :width => 502, :height => 648, :alt => (alt = 'HTML5 and CSS3: Visual QuickStart'), :title => alt}
+
+    %section#week-1.week
+      .container
+        .row
+          %header.span8
+            %h1 Week 1
+            %img.bg{:src => 'images/week-1-bg.png', :alt => 'Week 1 illustrative background', :width => 500, :height => 320}
+          %section.span8
+            %h2 Introduction to HTML
+            %ul
+              %li What is HTML?
+              %li Basic HTML structure tags: &lt;html>, &lt;head>, &lt;title>, &lt;body>
+              %li Section Heading tags: &lt;h1>, &lt;h2>, &lt;h3>, …
+              %li Paragraphs: the &lt;p> tag
+              %li Basic Document Tree
+              %li Links & Images: &lt;a> & &lt;img>
+              %li Relative & Absolute URLs
+
+    %section#week-2.week.switch
+      .container
+        .row
+          %header.span8
+            %h1 Week 2
+          %section.span8
+            %h2 More HTML Tags
+
+    %section#week-3.week
+      .container
+        .row
+          %header.span8
+            %h1 Week 3
+          %section.span8
+            %h2 Introduction to CSS
+
+    %section#week-4.week.switch
+      .container
+        .row
+          %header.span8
+            %h1 Week 4
+          %section.span8
+            %h2 Creating a Layout
+
+    %section#week-5.week
+      .container
+        .row
+          %header.span8
+            %h1 Week 5
+          %section.span8
+            %h2 Intermediate HTML & CSS
+
+    %footer#footer
+      %p Blurb.
 
     %script{:src => 'js/lib/jquery-1.7.1.min.js'}
     %script{:src => 'js/lib/twitter-bootstrap/dropdown.js'}

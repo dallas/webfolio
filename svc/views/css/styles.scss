@@ -1,7 +1,12 @@
 @import 'bourbon/bourbon';
 @import url('fonts.css');
 
-body { }
+body { background-color:#222; }
+
+a { color:#FA6900; }
+a:hover { color:#F38630; }
+a:active { color:#69D2E7; }
+
 p { font-size:14px; line-height:1.5; }
 
 abbr {
@@ -119,16 +124,12 @@ h1 {
     radial-gradient(center, ellipse, rgba(white, .075) 11%, transparent 15%),
     radial-gradient(center, ellipse, rgba(white, .075) 11%, transparent 15%));
   background-position:0 0, 6px 6px, 0 1px, 6px 7px;
-  background-color:#1c1c1c;
+  background-color:#262626;
   @include background-size(12px 12px);
-
   border-top:1px solid #777;
-
   @include box-shadow(0 -2px 4px rgba(black, .25));
-
   color:#eee;
   padding-bottom:100px;
-  padding-top:60px;
   position:relative;
   z-index:5;
 
@@ -145,7 +146,7 @@ h1 {
   }
 
   h1 {
-    color:#62b0ff;
+    color:#69D2E7;
     text-shadow:-1px -1px 1px rgba(black, 0.9),
                 1px  1px 1px rgba(lighten(#62b0ff, 25%), .5);
   }
@@ -160,6 +161,10 @@ h1 {
   }
 }
 
+#instructor, #course-description, #course-materials {
+  padding-top:60px;
+}
+
 #instructor {
   position:relative;
   z-index:5;
@@ -170,7 +175,7 @@ h1 {
     height:auto;
     left:-6px;
     position:absolute;
-    top:-125px;
+    top:-67px;
     width:100px;
     z-index:1;
   }
@@ -182,7 +187,7 @@ h1 {
     height:75px;
     left:-6px;
     position:absolute;
-    top:-125px;
+    top:-67px;
     width:112px;
     z-index:0;
   }
@@ -199,4 +204,52 @@ h1 {
     top:9px;
     width:90px;
   }
+}
+
+.week {
+  background-color:#f5f3ee;
+  min-height:400px;
+  padding:80px 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    color:#444;
+  }
+
+  .row { position:relative; }
+
+  &.switch {
+    header {
+      position:absolute;
+      right:0;
+    }
+  }
+}
+
+#week-1, #week-5 {
+  background-image:url('../images/ragged-border.png');
+  background-repeat:repeat-x;
+}
+
+#week-1 { background-position:center -6px; }
+#week-5 { background-position:center 554px; }
+
+#week-1 {
+  h1 {
+    position:relative;
+    z-index:2;
+  }
+
+  .bg {
+    left:0;
+    position:absolute;
+    top:0;
+    @include transform(matrix(1, -0.1, 1, 0.6, -48, -69));
+    z-index:1;
+  }
+}
+
+#footer {
+  border-top:0;
+  margin-top:0;
+  min-height:200px;
 }
