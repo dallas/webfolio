@@ -1,0 +1,93 @@
+#infogfx_globe {
+  overflow: hidden;
+  position: relative;
+  height: 570px;
+  margin: 20px;
+  width: 490px;
+}
+
+#infogfx_globe .infogfx_globe_wrapper {
+  display: block;
+  overflow: visible;
+  position: relative;
+  height: 570px;
+
+  -webkit-animation: hover  infinite 4.5s ease-in-out;
+}
+
+@-webkit-keyframes hover {
+  from  { top: 0; }
+  50%   { top: 10px; }
+  to    { top: 0; }
+}
+
+#infogfx_globe .infogfx_globe {
+  background: transparent url('new-globe360.jpg') 0 0;
+  display: block;
+  height: 418px;
+  margin-bottom: 100px;
+  position: absolute;
+  width: 490px;
+
+/*  -webkit-animation: sprite infinite 12s step-end;*/
+}
+
+#infogfx_globe .infogfx_globe_two { display: none; }
+
+@-webkit-keyframes sprite {
+  from    { background-position: 0       0; }
+  08.33%  { background-position: -160px  0; }
+  16.67%  { background-position: -320px  0; }
+  25.00%  { background-position: -480px  0; }
+  33.33%  { background-position: -640px  0; }
+  41.66%  { background-position: -800px  0; }
+  50.00%  { background-position: -960px  0; }
+  58.33%  { background-position: -1120px 0; }
+  66.66%  { background-position: -1280px 0; }
+  75.00%  { background-position: -1440px 0; }
+  83.33%  { background-position: -1600px 0; }
+  91.66%  { background-position: -1760px 0; }
+  to      { background-position: 0       0; }
+}
+
+#infogfx_globe .infogfx_globe_shadow {
+  background: #333;
+  background: -webkit-radial-gradient(ellipse, rgba(0,0,0,0.5), rgba(0,0,0,0) 50%, rgba(0,0,0,0));
+  -webkit-border-radius: 200px;
+  content: '';
+  display: block;
+  height: 400px;
+  left: 45px;
+  position: absolute;
+  top: 550px;
+  -webkit-transform: rotateX(80deg);
+  width: 400px;
+
+/*  -webkit-animation: hover-shadow infinite 4.5s ease-in-out;*/
+}
+
+@-webkit-keyframes hover-shadow {
+  from  {
+    -webkit-border-radius: px;
+    height: 160px;
+    left: 0;
+    top: 400px;
+    width: 300px;
+  }
+  50%   {
+    -webkit-border-radius: 200px;
+    height: 400px;
+    left: 45px;
+    top: 400px;
+    width: 400px;
+  }
+  to    {
+    -webkit-border-radius: 80px;
+    height: 160px;
+    left: 0;
+    top: 120px;
+    width: 160px;
+  }
+}
+
+.infogfx_controls {}

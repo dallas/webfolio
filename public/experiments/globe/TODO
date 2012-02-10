@@ -1,0 +1,7 @@
+[ ] make a PLAN!
+[x] need two globe instances so we can move the background images and dissolve between the two
+[x] use jQuery to change the background-position on both elements
+[x] use jQuery to change the opacity setting
+[ ] use CSS to transition on opacity (when available)
+[ ] fallback to jQuery for the opacity change
+[ ] check support in Safari, Firefox, and IE (and Opera?)

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Rotating Globe</title>
+
+  <!-- Styles to make the presentation page pretty -->
+  <link href='page.css' type='text/css' rel='stylesheet' />
+
+  <!-- Styles for this specific widget -->
+  <link href='infogfx_globe.css' type='text/css' rel='stylesheet' />
+
+  <!-- Modernizr for browser feature detection (like does it support CSS animations?) -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js'></script>
+</head>
+
+<body>
+  <!-- This element is the key, JavaScript will do the rest (should there be a non-JS fallback?) -->
+  <div id='infogfxGlobe' class='infogfx'>
+    <div class='g-timer'>
+      <span class="g-hrs">00</span>hh:
+      <span class="g-mins">00</span>mm:
+      <span class="g-secs">00</span>ss
+      <p>elapsed time</p>
+    </div>
+
+    <ol class='g-info' title='List of data-related events, as they happen in sped up time.'>
+      <li title='timer starts'>The game begins.</li>
+      <li title='18 seconds later'>First shot is made on U.S. soil.</li>
+      <li title='22 seconds have elapsed'>The crowd goes wild.</li>
+      <li title='35 seconds have elapsed'>The shot is deliverd across the continent.</li>
+      <li title='1 minute, 4 seconds have elapsed'>The shot crosses the Atlantic.</li>
+      <li title='1 minute, 16 seconds have elapsed'>The shot lands in Europe.</li>
+      <li title='1 minute, 29 seconds have elapsed'>The shot reaches Africa.</li>
+      <li title='1 minute, 44 seconds have elapsed'>Content begins to arrive in Eastern Asia.</li>
+      <li title='2 minutes have elapsed'>Content consumed globally.</li>
+    </ol>
+
+    <div class='gfx-globe' title='Graphic of a globe illustrating how Cisco serves up NBA video content in approximately 2 minutes.'></div>
+
+    <div class='g-share'>
+      <p>share</p>
+      <ul>
+        <li class='g-share-fbook'><a href='#facebook'>Facebook</a></li>
+        <li class='g-share-lin'><a href='#linked-in'>Linked In</a></li>
+        <li class='g-share-twit'><a href='#twitter'>Twitter</a></li>
+        <li class='g-share-down'><a href='#download'>Download</a></li>
+        <li class='g-share-mail'><a href='#email'>Email</a></li>
+      </ul>
+    </div>
+
+    <div class='g-controls'>
+      <a href='#reset'  class='g-btn g-rw'>Reset</a>
+      <a href='#play'   class='g-btn g-play'>Play</a>
+      <a href='#pause'  class='g-btn g-pause'>Pause</a>
+      <a href='#end'    class='g-btn g-ff'>End</a>
+
+      <div class='g-slider'>
+        <a href='#slide' class='g-slide'><span>Slide</span></a>
+        <ol>
+          <li class='g-slider-stop g-slider-first-stop'>Content created</li>
+          <li class='g-slider-stop'>…</li>
+          <li class='g-slider-stop'>…</li>
+          <li class='g-slider-stop'>…</li>
+          <li class='g-slider-stop'>…</li>
+          <li class='g-slider-stop'>…</li>
+          <li class='g-slider-stop'>…</li>
+          <li class='g-slider-stop'>…</li>
+          <li class='g-slider-stop g-slider-last-stop'>Content consumed</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery 1.7.1 -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+
+  <!-- jQuery transit plugin (for using native CSS3 transitions and transforms when possible) -->
+  <script src='jquery.transit.js'></script>
+
+  <!-- Spritely (fallback for the spinning globe animation via JS instead of CSS3 animation) -->
+  <script src='http://spritely.net/releases/0.6.1/jquery.spritely-0.6.1.js'></script>
+
+  <!-- JS for this specific widget -->
+  <script src='infogfx_globe.js'></script>
+</body>
+
+</html>
