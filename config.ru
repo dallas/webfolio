@@ -1,5 +1,3 @@
-raise 'yes, I am called!'
-
 require 'rubygems'
 require 'bundler'
 
