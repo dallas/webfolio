@@ -1,3 +1,4 @@
+Gem.clear_paths
 require 'rubygems'
 require 'bundler'
 
