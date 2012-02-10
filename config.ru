@@ -1,5 +1,6 @@
+raise 'yes, I am called!'
+
 require 'rubygems'
-Gem.clear_paths
 require 'bundler'
 
 Bundler.require
